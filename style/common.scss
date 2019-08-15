@@ -1,0 +1,28 @@
+.longButton {
+	width: 314px;
+	height: 44px;
+	background: $orange;
+	border-radius: 22px;
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+	p { 
+		text-align: center;
+		color: $white;
+		font-size: 20px;
+	}
+}
+
+// .longButton:hover {
+// 	background: $darkorange;
+// }
+.longButton:active {
+	background: $darkorange;
+}
+
+.drop{
+	display: flex;
+	justify-content: center;
+	margin-top: 67px;
+}
+
