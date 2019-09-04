@@ -103,7 +103,7 @@ export default {
 	width: 100%;
 }
 .bg {
-	background-image: url("/static/bg.JPG");
+	background-image: url("/static/bg.jpg");
 	background-repeat:no-repeat; 
 	background-size:100% 100%;
 	-moz-background-size:100% 100%;
@@ -113,7 +113,7 @@ export default {
 }
 .content {
 	text-align: center;
-	color: $white;
+	color: $bluegray;
 	font-size: 16px;
 	margin-top: 84px;
 }

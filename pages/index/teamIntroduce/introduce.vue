@@ -30,7 +30,7 @@ import TeamCard from "@/components/TeamCard.vue"
 				teamInfo: [
 					{
 						name:"AI组",
-						imgUrl: '/static/AI.jpg',
+						imgUrl: '/static/AI.png',
 						info: 'AI组是Dian团队人数最多的项目组，致力于研究和开发更加深刻而有用的人工智能，主要研究方向有计算机视觉、自然语言处理、生成式对抗网络以及深度强化学习。其中的每个方向都是十分有趣又在当下十分火热的，相信我们能脚踏实地，共创辉煌！',
 						tech: 'Natural Language Processing、Machine Learning、Deep Learning、Reinforcement Learning'
 					},{
@@ -40,12 +40,12 @@ import TeamCard from "@/components/TeamCard.vue"
 						tech: '5G、C、Linux'
 					},{
 						name:"迅测组",
-						imgUrl: '/static/IoT.jpg',
+						imgUrl: '/static/IoT.png',
 						info: '迅测组依托Dian团队老队员的创业公司，该项目致力于打造绿色出行新方式，项目组秉承以老带新的优良传统。在这里，你不再是一个人在战斗。我们有一批经过多年职场历练的优秀毕业老队员亲身指导，也有众多优秀的学长学姐们传授经验。从硬件到嵌入式、从后台到前端，你可以在自己喜欢的方向大展身手，体验整个项目流程的开发。在这里，你将收获知识、技术、友谊和成长。',
 						tech: 'C、Node.js、Android、iOS、Weex'
 					},{
 						name:"启亦电子组",
-						imgUrl: '/static/qiyi.jpeg',
+						imgUrl: '/static/qiyi.png',
 						info: '启亦电子组与上海启亦电子科技有限公司合作进行项目开发。项目致力于实现电力测量设备与应用软件的交互，打造电子电力APP。目前项目组主要着力点为通过移动开发实现硬件显示，项目涉及到Android开发、IOS开发、嵌入式开发、Windows软件开发。无论你擅长哪方面，都可以在项目组中大展身手。',
 						tech: 'SoC软硬件协同设计、Android开发、Windows桌面程序开发'
 					},{
@@ -55,22 +55,22 @@ import TeamCard from "@/components/TeamCard.vue"
 						tech: 'Python，Java，React，Vue，微信小程序等'
 					},{
 						name: '网安组',
-						imgUrl: '/static/wangan.jpg',
+						imgUrl: '/static/wangguan.png',
 						info: '网络安全是Dian团队一大技术方向。我们依托于Dian团队的导师资源，凭借团队在网络方向深厚积累，与中科院信工所等国家资深网络安全机构深入合作，将机器学习等最新技术引入到网络流量分析，安全威胁特征识别等网络安全前沿研究方向。培养网络安全方面的人才，并给出切实可行的防护解决方案。',
 						tech: '渗透技术、加密技术、P2P技术、流量大数据分析技术',
 					},{
 						name:"深信服组",
-						imgUrl: '/static/shenxinfu.jpg',
+						imgUrl: '/static/shenxinfu.png',
 						info: '深信服组于2018年5月成立，这也是团队与深信服公司首次合作，本期项目目标是实现一个安全的邮件客户端。整体项目从UI、中间层和业务层以及底层协议全部需要自己实现。有项目经理入驻团队进行指导协助项目进行。UI使用现阶段流行的跨平台框架react-native进行开发，中间层根据平台使用oc和java进行开发，底层以及协议层使用C++11进行开发，也是团队为数不多的用C++开发的项目组。',
 						tech: 'C++、OC、java、react-native'
 					},{
 						name:"悦然心动组",
-						imgUrl: '/static/yueranxindong.jpg',
+						imgUrl: '/static/yueranxindong.png',
 						info: '在悦然心动，你能够了解最新的项目需求、接触到真实的企业项目、可以和一线的工程师并肩作战。公司技术方向十分广泛，包括前端后台开发，iOS开发、Android开发，Unity游戏开发等。每个项目组成员都会有公司相关的专业人员带领学习，真正的投入到产品的设计研发中；在此过程中不仅可以学到技术，更能够见证自己参与研发的产品从初具雏形到最终发布的全过程。',
 						tech: 'iOS/Android开发、Nodejs后台开发、Unity游戏开发等'
 					},{
 						name: '区块链组',
-						imgUrl: '/static/qukuailian.jpg',
+						imgUrl: '/static/qukuailian.png',
 						info: '区块链项目组，欢迎热爱区块链技术，热爱钻研，热爱编程，爱动手实践，具有团队合作精神的你加入！',
 						tech: '共识算法（DPOS+网络编码和路由）'
 					}
@@ -90,7 +90,7 @@ import TeamCard from "@/components/TeamCard.vue"
 	//width: 100%;
 }
 .swiper {
-	margin-top: 20px;
+	margin-top: 15px;
 	height: 540px;
 }
 </style>

@@ -35,7 +35,7 @@
 .text{
 	&-content {
 		p {
-			color: $white;
+			color: $bluegray;
 			font-size: 16px;
 			text-indent:2em;
 		}

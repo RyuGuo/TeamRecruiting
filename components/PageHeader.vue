@@ -73,7 +73,7 @@ export default {
 	justify-content: space-between;
 	&-title {
 		text-align: center;
-		color: white;
+		color: $bluegrayalittlelight;
 		font-size: 20px;
 		font-weight: bold;
 	}
@@ -111,7 +111,7 @@ export default {
 		text-align: center;
 		list-style: none;
 		color: $white;
-		border: 1px $bluenormal solid;
+		border: 1px $orange solid;
 		font-size: 14px;
 		line-height: 34px;
 		//background: $purple;
