@@ -60,5 +60,13 @@
             "urlCheck" : false
         },
         "usingComponents" : true
+    },
+    "h5" : {
+        "title" : "Dian团队招新",
+        "router" : {
+            "mode" : "history",
+            "base" : "/static/h5/"
+        },
+        "domain" : ""
     }
 }

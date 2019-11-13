@@ -1,10 +1,12 @@
 <template>
 	<div class="text">
-		<p class="text-title">{{title}}</p>
+		<p class="text-title" v-if="title">{{title}}</p>
 		<div class="text-content">
-			<p>{{maincontent}}</p>
-			<div class="text-add-button" @click="handleShowAdd" v-if="isshowadd==false">read more</div>
-			<p v-if="isshowadd==true" class="animated fadeIn">{{addcontent}}</p>
+			<p v-for="(content,index) in contentList" :key="index">{{content}}</p>
+<!-- 			<p>{{maincontent}}</p> -->
+<!-- 			<div class="text-add-button" @click="handleShowAdd" v-if="isshowadd==false">read more</div> -->
+			<!-- <p v-if="isshowadd==true" class="animated fadeIn">{{addcontent}}</p> -->
+<!-- 			<p>{{addcontent}}</p> -->
 		</div>
 	</div>
 </template>
@@ -15,16 +17,17 @@
 			title: String,
 			maincontent: String,
 			addcontent: String,
+			contentList: Array,
 		},
 		data() {
 			return {
-				isshowadd: false,
+				//isshowadd: false,
 			};
 		},
 		methods:{
-			handleShowAdd() {
-				this.isshowadd = true 
-			}
+			// handleShowAdd() {
+			// 	this.isshowadd = true 
+			// }
 		}
 	}
 </script>
@@ -34,10 +37,16 @@
 @import "@/style/Animate.scss";
 .text{
 	&-content {
+		width: 240px;
+		padding: 20px 30px;
+		margin: auto;
+		background: rgba(255,255,255,0.85);
+		border-radius: 10px;
 		p {
 			color: $bluegray;
 			font-size: 16px;
 			text-indent:2em;
+			line-height: 1.5em;
 		}
 	}
 	&-add-button {

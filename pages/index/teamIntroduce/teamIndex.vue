@@ -42,19 +42,23 @@ import DropUpArrow from "@/components/DropUpArrow.vue"
 @import "@/style/Animate.scss";
 .content {
 	font-size: 20px;
-	color: $white;
-	margin-top: 190px;
+	color: $black;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	//left: 50%;
+	transform: translate(0,-50%);
 	text-align: center;
-	justify-content: center;
-	align-items: center;
+	//justify-content: center;
+	//align-items: center;
 }
 
 .drop{
-		display: flex;
-		position: absolute;
-		bottom: 30px;
-		left: 50%;
-		transform: translate(-50%,-50%);
-		justify-content: center;
-	}
+	display: flex;
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	justify-content: center;
+}
 </style>

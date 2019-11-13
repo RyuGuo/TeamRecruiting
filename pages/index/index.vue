@@ -1,12 +1,12 @@
 <template>
 	<div class="page bg">
-		<swiper class="page" :indicator-dots="false" :autoplay="false" :vertical="true" @change="handleChange">
+		<swiper class="page" :indicator-dots="false" :current="current" :autoplay="false" :vertical="true" @change="handleChange">
 			<swiper-item>
 				<div class="page">
 					<PageHeader :isshowlogo="true"  title="" scroll-with-animation="true"></PageHeader>
 					<div class="video-wrap">
 						<!-- 2018年的秋招视频，不要直接上传哦┏ (゜ω゜)=☞ -->
-						<video src="https://apd-e3f75056217092d39b5314bcf1a512d9.v.smtcdns.com/vhot2.qqvideo.tc.qq.com/AWHnsYm9WAJqQqeJ7mObhUf4UwtKIzr-iThPNXJQmPI0/uwMROfz2r5zIIaQXGdGnC2dfDmb_xYKxrIGz_bGUg2Lja6ru/w07010sb70w.mp4?sdtfrom=v1010&guid=99be7923d9c51ad1ca45ee726cb03f36&vkey=E3CE2AA7F160AEAFFF24EB03E2EF6A79223AA09DA07AA6D4001945FDD53E7F1DB1315139B8C072D92FE4F9A5438DECC374AF73355C124CBF3025C6817BA0CFE6E9196148FB6657FB89335B1AB6F8538C540FB6AD56ACE93F2C885F11C7571638A119159A5201D4896A7B037DFFA8C1C3870F4DF724A3770213CF720673ECF867" controls></video>
+						<video src="/static/video/publicity.mp4" controls></video>
 					</div>
 					<div class="content">
 						<div class="animated fadeInUp" style="animation-delay: 0s;">
@@ -41,7 +41,12 @@
 			</swiper-item>
 			<swiper-item>
 				<div class="page">
-					<teamIndex :isReady="current==3"></teamIndex>
+					<teachers></teachers>
+				</div>
+			</swiper-item>
+			<swiper-item>
+				<div class="page">
+					<teamIndex :isReady="current==4"></teamIndex>
 				</div>
 			</swiper-item>
 			<swiper-item>
@@ -63,6 +68,7 @@ import PageHeader from "@/components/PageHeader.vue"
 import DropUpArrow from "@/components/DropUpArrow.vue"
 import introduce1 from "./introduce/introduce1.vue"
 import introduce2 from "./introduce/introduce2.vue"
+import teachers from "./introduce/teachers.vue"
 import teamIndex from "./teamIntroduce/teamIndex.vue"
 import introduce from "./teamIntroduce/introduce.vue"
 import someInfo from "./infomation/someInfo.vue"
@@ -73,22 +79,33 @@ export default {
 		DropUpArrow,
 		introduce1,
 		introduce2,
+		teachers,
 		teamIndex,
 		introduce,
 		someInfo,
 	},
 	data() {
 		return {
-			current: 0
+			current: 0,
+			// videoUrl: './static/vedio/publicity.mp4'
 		}
 	},
 	onLoad() {
-
+		if (window.addEventListener)//FF,火狐浏览器会识别该方法
+			window.addEventListener('DOMMouseScroll', this.wheel, false);
+		window.onmousewheel  = this.wheel;
 	},
 	methods: {
 		handleChange(mp) {
 			if(mp.detail.source=="touch"){
 				this.current = mp.detail.current;
+			}
+		},
+		wheel(e){
+			if(e.deltaY>0 && this.current<7-1){
+				this.current++;
+			} else if(e.deltaY < 0 && this.current>0){
+				this.current --;
 			}
 		}
 	}
@@ -100,14 +117,15 @@ export default {
 @import "@/style/Animate.scss";
 .page {
 	height: 100%;
-	width: 100%;
+	width: 375px;
+	margin: auto;
 }
-.bg {
-	background-image: url("/static/bg.jpg");
+/* .bg {
+	background-image: url("/static/image/bg.jpg");
 	background-repeat:no-repeat; 
 	background-size:100% 100%;
 	-moz-background-size:100% 100%;
-}
+} */
 .swiper {
 	height: 100%;
 }
@@ -115,15 +133,27 @@ export default {
 	text-align: center;
 	color: $bluegray;
 	font-size: 16px;
-	margin-top: 84px;
+	/*margin-top: 30%;*/
+	/*margin-top: 12%;*/
+    position: absolute;
+    width: 100%;
+    top: 56%;
 }
 .video-wrap {
 	display: flex;
 	justify-content: center;
-	margin-top: 30px;
+	margin-top: 25px;
 	video {
 		width: 306px;
 		height: 162px;
 	}
+}
+.drop{
+	display: flex;
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	justify-content: center;
 }
 </style>
